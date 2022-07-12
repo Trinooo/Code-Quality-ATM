@@ -31,6 +31,9 @@ public class ATM {
 	
 	/* Method to deposit (add) money to the account */
 	public void deposit(double depositAmount) {
+		if (depositAmount < 0) {
+			return;
+		}
 		System.out.println("Depositing " + depositAmount + " " + currentCurrency);
 		balance += depositAmount;
 	}

@@ -18,4 +18,13 @@ class TestATM {
 		Assert.assertEquals("USD", atm.checkCurrency());
 	}
 	/* Write your tests here */
+	 
+	 @Test
+	 void testExchangeUSDToCAD() throws Exception {
+		 ATM atm = new ATM(1000.43, "USD");
+		 atm.exchangeCurrency("CAD");
+		 Assert.assertEquals(1300.56, atm.checkBalance(), 0.001);
+		 Assert.assertEquals("CAD", atm.checkCurrency());
+		 
+	 }
 }
